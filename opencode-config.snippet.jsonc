@@ -1,0 +1,17 @@
+// Add this inside the "mcp" block of your opencode config:
+//   ~/.config/opencode/opencode.jsonc  (global)
+//   .opencode/opencode.jsonc          (project-local)
+{
+  "mcp": {
+    "trello": {
+      "type": "local",
+      "command": ["npx", "-y", "mcp-trello"],
+      "enabled": true,
+      "environment": {
+        "TRELLO_API_KEY": "{env:TRELLO_API_KEY}",
+        "TRELLO_TOKEN": "{env:TRELLO_TOKEN}",
+        "TRELLO_BOARD_ID": "{env:TRELLO_BOARD_ID}"
+      }
+    }
+  }
+}
